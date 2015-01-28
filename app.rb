@@ -53,3 +53,9 @@ post("/make_purchase") do
   end
   erb(:purchase)
 end
+
+post("/remove_from_cart") do
+  @product = Product.find(params.fetch("id").to_i())
+  @product.destroy()
+  redirect("/")
+end

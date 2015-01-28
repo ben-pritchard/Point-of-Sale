@@ -24,4 +24,9 @@
   <button type="submit">Submit</button>
 </form>
 
+<form action='/delete_product' method='post'>
+  <input id="id" name="id" value= "<%= @product.id() %>" type='hidden'>
+  <button type="submit">Delete Product</button>
+</form>
+
 <a href="/">Back to Main Page</a>

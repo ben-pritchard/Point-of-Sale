@@ -2,7 +2,12 @@
 
 <ul>
   <% @purchase.products().each() do |product| %>
-    <li>Name: <%= product.name() %> Price: <%= product.price() %></li>
+    <li>Name: <%= product.name() %> Price: <%= product.price() %>
+      <form action='/remove_from_cart' method='post'>
+        <input id="id" name="id" value= "<%= product.id() %>" type='hidden'>
+        <button type="submit">X</button>
+      </form>
+    </li>
   <% end %>
 </ul>
 
