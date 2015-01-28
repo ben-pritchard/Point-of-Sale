@@ -1,0 +1,9 @@
+<h1>Welcome to the purchase page</h1>
+
+<ul>
+  <% @purchase.products().each() do |product| %>
+    <li>Name: <%= product.name() %> Price: <%= product.price() %></li>
+  <% end %>
+</ul>
+
+<a href="/">Back to Main Page</a>
